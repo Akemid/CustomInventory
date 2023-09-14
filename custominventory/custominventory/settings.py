@@ -39,7 +39,9 @@ DJANGO_APPS = [
     'django.contrib.staticfiles',
 ]
 
-MY_APPS = []
+MY_APPS = [
+    'apps.inventory'
+]
 
 THIRD_PARTY_APPS = []
 
