@@ -6,6 +6,6 @@ from .models import Item
 class ItemAdmin(admin.ModelAdmin):
     '''Admin View for Item'''
 
-    list_display = ('',)
-    list_filter = ('',)
+    list_display = [field.name for field in Item._meta.fields]
+    #list_filter = ('',)
     search_fields = ('name',)
