@@ -17,6 +17,7 @@ class Item(models.Model):
     short_name = models.CharField(max_length=20)
     category_id = models.ForeignKey(Category,on_delete=models.CASCADE)
     brand_id = models.ForeignKey(Brand,on_delete=models.CASCADE)
+    stock = models.FloatField(default=0)
     
 class CampaignDetail(models.Model):
     item_id = models.ForeignKey(Item, on_delete=models.CASCADE)
