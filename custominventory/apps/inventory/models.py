@@ -23,4 +23,14 @@ class CampaignDetail(models.Model):
     campaign_id = models.ForeignKey(Campaign, on_delete=models.CASCADE)
     purchase_price = models.FloatField(min=0)
     sale_price = models.FloatField(min=0)
+
+class Transaction(models.Model):
     
+    TRANSACTION_TYPE = (
+        ('I','Incoming'),
+        ('O','Outgoing'),
+    )
+    
+    campaign_id = models.ForeignKey(Campaign, on_delete=models.CASCADE)
+    item_amount = models.FloatField(min=1)
+    transaction_type = models.CharField(max_length=1, choices=TRANSACTION_TYPE)    
