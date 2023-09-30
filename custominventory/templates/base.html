@@ -10,6 +10,8 @@
         {% endblock title %}            
     </title>
     <link rel="stylesheet" href="{% static 'static/css/bootstrap5.min.css' %}">
+    {% block css %}
+    {% endblock css %}
 
 </head>
 <body>    
@@ -17,5 +19,7 @@
     {% endblock content %}
     <script src="{% static 'static/js/boostrap5.bundle.min.js' %}"></script>
     <script src="{% static 'static/js/petite-vue.iife.js' %}"></script>     
+    {% block js %}
+    {% endblock js %}
 </body>
 </html>
