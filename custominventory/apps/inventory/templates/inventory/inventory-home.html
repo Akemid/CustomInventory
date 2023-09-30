@@ -1,12 +1,15 @@
 {% extends 'inventory/base.html' %}
-
+{% load static %}
 {% block title %}
     Inventory Home
 {% endblock title %}
 
 {% block content %}
-    <div class="container">
-        <h1 class="txt-secondary"> Probando el nuevo bootstrap </h1>
+    <div class="container" id="app">
+        ${ message }
+        <h1 class="text-secondary"> Probando el nuevo bootstrap </h1>
     </div>
 {% endblock content %}
-    
+{% block js %}
+<script src="{% static 'inventory/js/app.js' %}"></script>
+{% endblock js %}    
