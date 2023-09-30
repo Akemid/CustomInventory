@@ -164,4 +164,4 @@ cython_debug/
 # Excepto el archivo "__init__.py"
 !**/migrations/__init__.py
 #
-pyproject.toml
+project.lock
