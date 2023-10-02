@@ -1,13 +1,5 @@
-const { createApp, ref } = Vue
+//import { createApp, ref } from "../../../../../static/js/vue-modulel.js" 
+//import TodoItem from "./components/TodoItem.js"
 
-createApp(
-    {
-        setup() {
-            const message = ref('Hello vuea!')
-            return {
-                message
-            }
-        },
-        delimiters : ['${','}']
-    }
-).mount('#app')
+const {createApp, ref} = Vue
+
