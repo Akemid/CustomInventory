@@ -23,7 +23,6 @@ from apps.inventory.urls import urlpatterns
 urlpatterns = [
     path('admin/', admin.site.urls),
     re_path('', include('apps.inventory.urls')),
-    re_path(r'^inventory/', include('apps.inventory.urls'))
 ]
 
 if settings.DEBUG:
