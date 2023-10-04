@@ -16,6 +16,7 @@ class Campaign(TimeStampedModel):
 class Item(TimeStampedModel):
     name = models.CharField(max_length=100)
     short_name = models.CharField(max_length=20)
+    description = models.CharField(max_length=300,null=True)
     category_id = models.ForeignKey(Category,on_delete=models.CASCADE)
     brand_id = models.ForeignKey(Brand,on_delete=models.CASCADE)
     stock = models.FloatField(default=0)
