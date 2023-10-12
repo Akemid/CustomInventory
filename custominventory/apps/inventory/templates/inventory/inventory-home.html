@@ -19,16 +19,38 @@
                     <p class="card-text">Descripcion del producto</p>
                     <div class="row g-2">
                         <div class="col-6">
-                            <a href="#" class="btn btn-warning w-100">Editar <i class="bi bi-pencil-fill"></i></a> 
+                            <button 
+                            type="button" 
+                            class="btn btn-warning w-100"
+                            data-bs-toggle="modal" 
+                            data-bs-target="#editProductModal"
+                            >Editar <i class="bi bi-pencil-fill"></i></button> 
                         </div>
                         <div class="col-6">
-                             <a href="#" class="btn btn-danger w-100">Eliminar <i class="bi bi-trash-fill"></i></a>
+                             <button
+                             type="button" 
+                             class="btn btn-danger w-100"                             
+                             data-bs-toggle="modal" 
+                             data-bs-target="#deleteProductModal"
+                             >
+                             Eliminar <i class="bi bi-trash-fill"></i></button>
                         </div>
                         <div class="col-6">                        
-                            <a href="#" class="btn btn-success w-100">Ingresar <i class="bi bi-plus-circle"></i></a> 
+                            <button
+                             type="button" 
+                            class="btn btn-success w-100"                          
+                             data-bs-toggle="modal" 
+                            data-bs-target="#addOperationModal"
+                            >
+                            Ingresar <i class="bi bi-plus-circle"></i></button> 
                         </div>
                         <div class="col-6">                        
-                            <a href="#" class="btn btn-primary w-100">Retirar <i class="bi bi-dash-circle"></i></a>
+                            <button 
+                            type="button"
+                            data-bs-toggle="modal"
+                            class="btn btn-primary w-100"
+                            data-bs-target="#substractOperationModal"
+                            >Retirar <i class="bi bi-dash-circle"></i></button>
                         </div>
                     </div>                                                            
                 </div>
@@ -36,6 +58,10 @@
         </div>
     </div>
     
+    {% include 'inventory/includes/products/edit-product-modal.html' %}    
+    {% include 'inventory/includes/products/delete-product-modal.html' %}    
+    {% include 'inventory/includes/operations/add-operation-modal.html' %}
+    {% include 'inventory/includes/operations/substract-operation-modal.html' %}
     <div id="float-button">
         <button
         class="btn btn-secondary float-button menu-btn" 
