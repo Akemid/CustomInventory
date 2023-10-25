@@ -1,0 +1,51 @@
+{% extends 'inventory/includes/modal-base.html' %}
+
+
+{% block id_modal %}addProductModal{% endblock id_modal %}
+    
+{% block modal_title %}
+    Agregar producto
+{% endblock modal_title %}
+
+{% block content %}
+<div class="mb-3">
+    <label class="form-label">Nombre</label>
+    <input type="text" class="form-control" placeholder="Colonia abcd">
+</div>
+<div class="mb-3">
+    <label class="form-label">Nombre corto</label>
+    <input type="text" class="form-control" placeholder="abcd">
+</div>
+<div class="mb-3">
+    <label class="form-label">Descripción</label>
+    <input type="text" class="form-control" placeholder="Esta es una colonia para ...">
+</div>
+<div class="mb-3">
+    <label class="form-label">Categoria</label>
+    <select class="form-select" aria-label="Default select example">
+        <option selected>Seleccione categoria</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+</div>
+<div class="mb-3">
+    <label class="form-label">Marca</label>
+    <select class="form-select" aria-label="Default select example">
+        <option selected>Seleccione marca</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+</div>
+<div class="mb-3">
+    <label class="form-label">Stock inicial</label>
+    <input type="number" min=0 class="form-control" placeholder="0">
+</div>
+{% endblock content %}
+    
+{% block final_button_name %}
+    Agregar
+{% endblock final_button_name %}
+    
+    

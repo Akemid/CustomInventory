@@ -59,7 +59,9 @@
     </div>
     
     {% include 'inventory/includes/products/edit-product-modal.html' %}    
-    {% include 'inventory/includes/products/delete-product-modal.html' %}    
+    {% include 'inventory/includes/products/add-product-modal.html' %}    
+    {% include 'inventory/includes/products/delete-product-modal.html' %}   
+    {% include 'inventory/includes/products/find-product-modal.html' %}  
     {% include 'inventory/includes/operations/add-operation-modal.html' %}
     {% include 'inventory/includes/operations/substract-operation-modal.html' %}
     <div id="float-button">
@@ -70,8 +72,18 @@
         ><i class="bi bi-gear"></i></button>
         <Transition name="float-options">
             <p v-if="show">
-                <button class="btn btn-success float-button add-btn"><i class="bi bi-plus-square"></i></button>
-                <button class="btn btn-primary float-button find-btn"><i class="bi bi-search"></i></button>
+                <button 
+                type="button"
+                class="btn btn-success float-button add-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#addProductModal"
+                ><i class="bi bi-plus-square"></i></button>
+                <button 
+                type="button"
+                class="btn btn-primary float-button find-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#findProductModal"
+                ><i class="bi bi-search"></i></button>
             </p>
         </Transition>
     </div>
