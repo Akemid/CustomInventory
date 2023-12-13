@@ -58,12 +58,17 @@
         </div>
     </div>
     
-    {% include 'inventory/includes/products/edit-product-modal.html' %}    
-    {% include 'inventory/includes/products/add-product-modal.html' %}    
-    {% include 'inventory/includes/products/delete-product-modal.html' %}   
-    {% include 'inventory/includes/products/find-product-modal.html' %}  
-    {% include 'inventory/includes/operations/add-operation-modal.html' %}
-    {% include 'inventory/includes/operations/substract-operation-modal.html' %}
+    <div id="modals">
+        {% include 'inventory/includes/products/edit-product-modal.html' %}    
+        {% include 'inventory/includes/products/add-product-modal.html' %}    
+        {% include 'inventory/includes/products/delete-product-modal.html' %}   
+        {% include 'inventory/includes/products/find-product-modal.html' %}  
+        {% include 'inventory/includes/operations/add-operation-modal.html' %}
+        {% include 'inventory/includes/operations/substract-operation-modal.html' %}    
+        {% include "inventory/includes/category/add-category-modal.html" %}
+    </div>
+
+    
     <div id="float-button">
         <button
         class="btn btn-secondary float-button menu-btn" 
@@ -93,4 +98,5 @@
 {% block js %}
 <script type="module" src="{% static 'inventory/js/app.js' %}" ></script>
 <script type="module" src="{% static 'inventory/js/floatButton.js' %}" ></script>
+<script type="module" src="{% static 'inventory/js/modals.js' %}" ></script>
 {% endblock js %}    

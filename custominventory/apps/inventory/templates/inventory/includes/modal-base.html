@@ -10,14 +10,23 @@
         {% endblock modal_title %}
             
         </h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" 
+        class="btn-close" 
+        data-bs-dismiss="modal" 
+        :data-bs-target="classAttributep"
+        :data-bs-toggle="classBsToggle"
+        aria-label="Close"></button>
       </div>
       <div class="modal-body">        
         {% block content %}
         {% endblock content %}            
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button"
+        class="btn btn-secondary" 
+        :data-bs-target="classAttributep"
+        :data-bs-toggle="classBsToggle"
+        data-bs-dismiss="modal">Cerrar</button>
         <button type="button" class="btn btn-primary">         
          {% block final_button_name %}
             
