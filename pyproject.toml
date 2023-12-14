@@ -15,6 +15,7 @@ sqlparse = "0.4.4"
 typing-extensions = "4.7.1"
 django-debug-toolbar = "^4.2.0"
 pillow = "^10.1.0"
+django-webpack-loader = "^2.0.1"
 
 [tool.poetry.group.dev.dependencies]
 typing-extensions = "4.7.1"

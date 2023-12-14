@@ -43,7 +43,9 @@ MY_APPS = [
     'apps.inventory'
 ]
 
-THIRD_PARTY_APPS = []
+THIRD_PARTY_APPS = [
+    'webpack_loader',
+]
 
 INSTALLED_APPS = DJANGO_APPS + MY_APPS + THIRD_PARTY_APPS
 
@@ -124,10 +126,32 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [BASE_DIR / 'static']
+STATIC_ROOT = BASE_DIR / 'public/static/'
+# FOR VUEJS
+STATICFILES_DIRS = [
+    BASE_DIR / 'public/static_dev/',
+    BASE_DIR / 'ui/dist',    
+    ]
 
 MEDIA_URL = 'media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_ROOT = BASE_DIR / 'public/media'
+
+
+# Directorio de Vue
+UI_DIR = BASE_DIR / 'ui/'
+
+# Opciones de webpack-loader
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'CACHE': not DEBUG,
+        'BUNDLE_DIR_NAME': 'webpack_bundles/',
+        'STATS_FILE': UI_DIR / 'webpack-stats.json',
+        'POLL_INTERVAL': 0.1,
+        'TIMEOUT': None,
+        'IGNORE': [r'.+\.hot-update.js', r'.+\.map'],
+        'LOADER_CLASS': 'webpack_loader.loader.WebpackLoader',
+    }
+}
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
