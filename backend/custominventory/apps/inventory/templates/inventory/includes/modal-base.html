@@ -1,0 +1,41 @@
+
+<!-- Modal -->
+<div class="modal fade" id="{% block id_modal %}{% endblock %}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable  modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">        
+        {% block modal_title %}
+            
+        {% endblock modal_title %}
+            
+        </h1>
+        <button type="button" 
+        class="btn-close" 
+        data-bs-dismiss="modal" 
+        :data-bs-target="classAttributep"
+        :data-bs-toggle="classBsToggle"
+        aria-label="Close"></button>
+      </div>
+      <div class="modal-body">        
+        {% block content %}
+        {% endblock content %}            
+      </div>
+      <div class="modal-footer">
+        <button type="button"
+        class="btn btn-secondary" 
+        :data-bs-target="classAttributep"
+        :data-bs-toggle="classBsToggle"
+        data-bs-dismiss="modal">Cerrar</button>
+        <button type="button"
+        :data-bs-target="classAttributep"
+        :data-bs-toggle="classBsToggle"
+        class="btn btn-primary">         
+         {% block final_button_name %}
+            
+         {% endblock final_button_name %}            
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

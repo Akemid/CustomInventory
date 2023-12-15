@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "custominventory"
+version = "0.1.0"
+description = "Django app to manage a custom inventory"
+authors = ["Sergio Mondragon"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+asgiref = "3.7.2"
+django = "4.2.5"
+django-model-utils = "4.3.1"
+sqlparse = "0.4.4"
+typing-extensions = "4.7.1"
+django-debug-toolbar = "^4.2.0"
+pillow = "^10.1.0"
+
+[tool.poetry.group.dev.dependencies]
+typing-extensions = "4.7.1"
+sqlparse = "0.4.4"
+django-model-utils = "4.3.1"
+django = "4.2.5"
+asgiref = "3.7.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

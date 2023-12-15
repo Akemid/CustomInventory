@@ -165,3 +165,7 @@ cython_debug/
 !**/migrations/__init__.py
 #
 poetry.lock
+#
+package-lock.json
+node_modules/
+dist/

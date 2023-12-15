@@ -1,0 +1,32 @@
+{% load render_bundle from webpack_loader %}
+<!DOCTYPE html>
+<html lang="en" 
+data-bs-theme="dark"
+    {% comment %} {% if dark_theme %}
+    data-bs-theme="dark"
+    {% endif %} {% endcomment %}>
+<head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>        
+        {% block title %}
+            
+        {% endblock title %}            
+    </title>
+    {% comment %} <link rel="stylesheet" href="{% static 'css/bootstrap5.min.css' %}"> {% endcomment %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    {% render_bundle 'main' 'css' %}
+     {% block css %}
+    {% endblock css %}
+
+</head>
+<body>    
+    {% block content %}        
+    {% endblock content %}
+    {% comment %} <script src="{% static 'js/bootstrap5.bundle.min.js' %}"></script> {% endcomment %}
+    {% render_bundle 'main' 'js' %}
+    {% comment %} <script src="{% static 'js/vue.js' %}"></script> {% endcomment %}
+    {% block js %}
+    {% endblock js %}
+</body>
+</html>
