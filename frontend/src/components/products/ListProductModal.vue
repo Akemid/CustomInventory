@@ -1,19 +1,8 @@
-{% extends 'inventory/base.html' %}
-{% load static %}
-{% block title %}
-    Inventory Home
-{% endblock title %}
-{% block css %}
-    <link rel="stylesheet" href="{% static 'inventory/css/style.css' %}">
-{% endblock css %}
-    
-{% block content %}
-{% include 'includes/navbar.html' %}
-<div id="app" class="container-fluid py-5">
-    <div class="row">
+<template>
+    <div class="row my-4">
         <div class="col position-relative">
             <div class="card position-absolute top-0 start-50 translate-middle-x" style="width: 18rem;">
-            <img src="{% static 'inventory/img/default_item.jpg' %}" class="card-img-top" alt="...">
+            <img src="" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Nombre del producto</h5>
                     <p class="card-text">Descripcion del producto</p>
@@ -58,40 +47,4 @@
         </div>
 
     </div>
-    <div id="modals">
-        {% include 'inventory/includes/products/edit-product-modal.html' %}    
-        {% include 'inventory/includes/products/add-product-modal.html' %}    
-        {% include 'inventory/includes/products/delete-product-modal.html' %}   
-        {% include 'inventory/includes/products/find-product-modal.html' %}  
-        {% include 'inventory/includes/operations/add-operation-modal.html' %}
-        {% include 'inventory/includes/operations/substract-operation-modal.html' %}    
-        {% include "inventory/includes/category/add-category-modal.html" %}
-    </div>
-
-    
-    <div id="float-button">
-        <button
-        class="btn btn-secondary float-button menu-btn" 
-        :class="{ rotation : clickIn , rotation_out : clickOut }"
-        @click="clickButton"
-        ><i class="bi bi-gear"></i></button>
-        <Transition name="float-options">
-            <p v-if="show">
-                <button 
-                type="button"
-                class="btn btn-success float-button add-btn"
-                data-bs-toggle="modal"
-                data-bs-target="#addProductModal"
-                ><i class="bi bi-plus-square"></i></button>
-                <button 
-                type="button"
-                class="btn btn-primary float-button find-btn"
-                data-bs-toggle="modal"
-                data-bs-target="#findProductModal"
-                ><i class="bi bi-search"></i></button>
-            </p>
-        </Transition>
-    </div>
-</div>
-
-{% endblock content %}
+</template>
