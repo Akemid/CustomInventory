@@ -1,21 +1,18 @@
 
-<script setup>
+<script setup lang="ts">
 import ModalGeneral from '../shared/ModalGeneral.vue';
-defineProps(
-    {
-        show: {
-            type: Boolean,
-            required: true
-        }
-    },
 
-)
+interface Props {
+    show: boolean;
+}
+
+defineProps<Props>()
+
 
 defineEmits([
   'close',
   'add-category',
 ])
-
 
 </script>
 

@@ -1,5 +1,5 @@
 
-<script setup>
+<script setup lang="ts">
 import ModalGeneral from '../shared/ModalGeneral.vue';
 defineProps(
     {

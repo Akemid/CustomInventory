@@ -1,7 +1,11 @@
+
 import './assets/main.css'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/js/bootstrap.min.js'  
+import 'bootstrap/dist/js/bootstrap.min'   
+
+import { createApp } from 'vue'
+import { createPinia } from 'pinia'
 
 /* import the fontawesome core */
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -14,8 +18,6 @@ import { faGear,faSquarePlus,faMagnifyingGlass,faPlus } from '@fortawesome/free-
 
 /* add icons to the library */
 library.add(faGear,faSquarePlus,faMagnifyingGlass,faPlus)
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
 
 import App from './App.vue'
 import router from './router'

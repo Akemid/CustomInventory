@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue';
 import FloatButton from '../components/shared/FloatButton.vue';
 import AddProductModal from '@/components/products/AddProductModal.vue';
@@ -28,7 +28,5 @@ function showModal(){
         :show="showAddCategoryModal" 
         @close="showAddCategoryModal = false"/>
     </Teleport>
-    <FloatButton 
-    @add-product="showModal"    
-    />
+    <FloatButton @add-product="showModal" />
 </template>

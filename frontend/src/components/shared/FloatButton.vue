@@ -1,4 +1,5 @@
-<script setup>
+<script setup lang="ts">
+// import { emit } from 'process';
 import { ref } from 'vue'
 
 const show = ref(false)
@@ -11,10 +12,13 @@ function clickButton() {
     show.value = !show.value
 }
 
-defineEmits(
-    ["add-product"]
+const emit = defineEmits(
+    ["addProduct"]
 )
 
+function buttonClick(){
+    emit("addProduct")
+}
 
 
 </script>
@@ -32,9 +36,9 @@ defineEmits(
         <p v-if="show">
             <button type="button"
             class="btn btn-success float-button add-btn"
-            @click="$emit('add-product')"
+            @click="buttonClick"
             >
-                   <font-awesome-icon icon="fa-solid fa-plus" />
+            <font-awesome-icon icon="fa-solid fa-plus" />
             </button>
             <button type="button"
              class="btn btn-primary float-button find-btn">
