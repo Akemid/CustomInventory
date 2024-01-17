@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import FloatButton from '../components/shared/FloatButton.vue';
-import AddProductModal from '@/components/products/AddProductModal.vue';
-import AddCategoryModal from '@/components/category/AddCategoryModal.vue';
-import ListProductModal from '@/components/products/ListProductModal.vue';
+// import AddProductModal from '@/components/products/AddProductModal.vue';
+// import AddCategoryModal from '@/components/category/AddCategoryModal.vue';
+import ListProduct from '@/components/products/ListProduct.vue';
 
 const showAddProductModal = ref(false)
 const showAddCategoryModal = ref(false)
@@ -15,8 +15,8 @@ function showModal(){
 
 </script>
 <template>
-    <ListProductModal/>
-    <Teleport to="body">
+    <ListProduct/>
+   <!--  <Teleport to="body">
         <AddProductModal 
         :show="showAddProductModal" 
         @close="showAddProductModal = false"
@@ -27,6 +27,6 @@ function showModal(){
         <AddCategoryModal 
         :show="showAddCategoryModal" 
         @close="showAddCategoryModal = false"/>
-    </Teleport>
+    </Teleport> -->
     <FloatButton @add-product="showModal" />
 </template>

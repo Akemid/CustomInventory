@@ -25,7 +25,7 @@ function buttonClick(){
 
 <template>
     <button 
-    class="btn btn-secondary float-button menu-btn" 
+    class="float-button menu-btn sm:hidden" 
     :class="{ rotation: clickIn, rotation_out: clickOut }"
     @click="clickButton">
 
@@ -35,13 +35,13 @@ function buttonClick(){
     <Transition name="float-options">
         <p v-if="show">
             <button type="button"
-            class="btn btn-success float-button add-btn"
+            class="float-button add-btn"
             @click="buttonClick"
             >
             <font-awesome-icon icon="fa-solid fa-plus" />
             </button>
             <button type="button"
-             class="btn btn-primary float-button find-btn">
+             class="float-button find-btn">
             <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
             </button>
         </p>
@@ -51,7 +51,8 @@ function buttonClick(){
 
 <style scoped>
 .float-button{        
-    position: absolute;     
+    background-color: brown;
+    position: fixed;     
     z-index: 10;
     width: 3rem;
     height: 3rem;    
@@ -64,6 +65,7 @@ function buttonClick(){
 
 .add-btn{   
     bottom: 6rem;
+    background-color: green;
 }
 
 .find-btn{
